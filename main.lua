@@ -25,50 +25,23 @@ Você empunha sua espada e se prepara para lutar.
 >
 ]]
 
+-- Dependências
+local player = require("definitions.player")
+local colossus = require("definitions.colossus")
+local utils = require("utils")
+
 -- Habilite o UTF-8
-os.execute("chcp 65001")
+utils.enableUtf8()
 
 --Header
-print([[
-====================================================
-   |^^^|                             |^^^|                            
-    }_{                               }_{
-    }_{                               }_{
-/|_/---\_|\                       /|_/---\_|\
-I _|\_/|_ I                       I _|\_/|_ I
-\| |   | |/                       \| |   | |/
-   |   |                             |   |
-   |   |                             |   |
-   |   |                             |   |
-   |   |                             |   |
-   |   |                             |   |
-   |   |                             |   |
-   |   |                             |   |
-   |   |                             |   |
-   |   |                             |   |
-   |   |                             |   |
-   |   |                             |   |
-   |   |                             |   |
-   |   |                             |   |
-   \   /                             \   /
-    \ /                               \ /
-     Y                                 Y
-      --------------------------------------
-
-             ⚔️  SIMULADOR DE BATALHA ⚔️
-
-====================================================
-
-      Você empunha sua espada e se prepara para lutar.
-                  É hora de batalhar!
-]])
-
+utils.printHeader()
 
 -- Obter definição do jogador
 
 -- Obter definição do mosntro
+local boss = colossus
 
 -- Apresentar o mosntro
-
+utils.printCreature(boss)
 
 -- Começar o loop de batalha

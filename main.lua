@@ -26,8 +26,8 @@ Você empunha sua espada e se prepara para lutar.
 ]]
 
 -- Dependências
-local player = require("definitions.player")
-local colossus = require("definitions.colossus")
+local player = require("player.player")
+local colossus = require("colossus.colossus")
 local utils = require("utils")
 
 -- Habilite o UTF-8

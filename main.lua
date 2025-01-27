@@ -22,7 +22,7 @@ Você empunha sua espada e se prepara para lutar.
 |   2. Usar poção de regeneração.
 |   3. Atirar uma pedra.
 |   4. Se esconder.
->
+    >
 ]]
 
 -- Dependências
@@ -45,3 +45,24 @@ local boss = colossus
 utils.printCreature(boss)
 
 -- Começar o loop de batalha
+while true do
+    -- Mostrar ações disponíveis
+    --TODO
+
+    -- Simular o turno do jogador
+
+    --Ponto de saida: Criatura ficou sem vida
+    if boss.health <= 0 then
+        break
+    end
+
+    -- Simular o turno da criatura
+
+    -- Ponto de saida: Jogador morreu
+    if player.health <= 0 then
+        break    
+    end
+end
+
+
+-- Fim do jogo

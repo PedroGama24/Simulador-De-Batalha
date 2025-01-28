@@ -47,9 +47,18 @@ local bossActions = colossusActions
 -- Apresentar o monstro
 utils.printCreature(boss)
 
+-- Definir nome e descrição do jogador
+utils.setPlayerInfo(player)
+
+-- Distribuir pontos para o jogador
+utils.distributePoints(player)
+
 -- Build the player
 playerActions.build()
 bossActions.build()
+
+-- Atributos do player para usuario
+utils.printPlayer(player)
 
 -- Começar o loop de batalha
 while true do

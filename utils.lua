@@ -84,6 +84,24 @@ function utils.printCreature(creature)
     print("|        Velocidade:     "..utils.getProgressBar(creature.agility))
 end
 
+---
+function utils.printPlayer(player)
+
+    --Calculate the health rate
+    local healthRate = math.floor((player.health / player.maxHealth) *10)
+
+    -- Cartão
+    print("| "..player.name)
+    print("| ")
+    print("| "..player.description)
+    print("| ")
+    print("|  Atributos:")
+    print("|        Vida:           "..utils.getProgressBar(healthRate))
+    print("|        Ataque:         "..utils.getProgressBar(player.attack))
+    print("|        Defesa:         "..utils.getProgressBar(player.defense))
+    print("|        Velocidade:     "..utils.getProgressBar(player.agility))
+end
+
 ---Pergunta para o jogador o numero que deseja, é retornado pela função
 ---@return any
 function utils.ask()
@@ -92,4 +110,59 @@ function utils.ask()
     return answer
 end
 
+---
+---Perguntar para o jogador qual e o nome e a descrição do personagem
+---@param player table
+function utils.setPlayerInfo(player)
+    print("Qual é o nome do seu personagem?")
+    io.write("> ")
+    player.name = io.read()
+    print("Descreva seu personagem:")
+    io.write("> ")
+    player.description = io.read()
+end
+
+
+function utils.distributePoints(player)
+    local totalPoints = 15
+    local maxHealth = 10
+
+    print(string.format("%s tem %d pontos para distribuir.", player.name, totalPoints))
+    print("O valor máximo para health é 10.")
+
+    while totalPoints > 0 do
+        print(string.format("Pontos restantes: %d", totalPoints))
+        print("Digite a quatidade de pontos para health:")
+        local healthPoints = utils.ask()
+        if healthPoints > maxHealth then
+            print("O valor máximo para health é 10.")
+        elseif healthPoints > totalPoints then
+            print("Você não tem pontos suficientes.")
+        else
+            player.health = healthPoints
+            player.maxHealth = healthPoints
+            totalPoints = totalPoints - healthPoints
+            break
+        end
+    end
+
+    local attributes = {"attack", "defense", "agility"}
+    for _, attribute in pairs(attributes) do
+        while totalPoints > 0 do
+            print(string.format("Pontos restantes: %d", totalPoints))
+            print(string.format("Digite a quatidade de pontos para %s:", attribute))
+            local points = utils.ask()
+            if points > totalPoints then
+                print("Você não tem pontos suficientes.")
+            else
+                player[attribute] = points
+                totalPoints = totalPoints - points
+                break
+            end
+        end
+    end
+end
+
 return utils
+
+

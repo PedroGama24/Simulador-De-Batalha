@@ -49,8 +49,10 @@ Durante a batalha, você pode escolher entre as seguintes ações:
    ```sh
    git clone https://github.com/PedroGama24/Simulador-De-Batalha
 2. Navegue até o diretório do projeto:
+    ```sh
     cd Simulador-De-Batalha
 3.Execute o jogo:
+    ```sh
     lua main.lua
 
 ## Contribuição

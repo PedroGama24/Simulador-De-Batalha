@@ -67,17 +67,17 @@ Qual será a próxima ação de Violet?
 > 1
 Violet atacou o Prismarine Colossus com sucesso, causando 3 de dano.
 
-Requisitos
+## Requesitos
 Lua 5.4.2 ou superior
 
-Como Executar
+## Como Executar
 Execute o jogo:
 lua main.lua
 
-Contribuição
+## Contribuição
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests para melhorar o jogo.
 
-Licença
+## Licença
 Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
 Divirta-se jogando e boa sorte na batalha! 🎮⚔️

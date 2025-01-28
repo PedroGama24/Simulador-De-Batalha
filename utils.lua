@@ -84,4 +84,12 @@ function utils.printCreature(creature)
     print("|        Velocidade:     "..utils.getProgressBar(creature.agility))
 end
 
+---Pergunta para o jogador o numero que deseja, é retornado pela função
+---@return any
+function utils.ask()
+    io.write("> ")
+    local answer = io.read("*n")
+    return answer
+end
+
 return utils

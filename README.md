@@ -52,8 +52,7 @@ Durante a batalha, você pode escolher entre as seguintes ações:
     ```sh
     cd Simulador-De-Batalha
 3.Execute o jogo:
-    ```sh
-    lua main.lua
+    `lua main.lua`
 
 ## Contribuição
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests para melhorar o jogo.

@@ -28,12 +28,12 @@ function actions.build()
                 creatureData.health = creatureData.health - damage
 
                 -- 4. Mostrar o resultado
-                print(string.format("Você atacou o %s com sucesso, causando %d de dano.", creatureData.name, damage))
+                print(string.format("%s atacou o %s com sucesso, causando %d de dano.", playerData.name, creatureData.name, damage))
                 local healthRate = math.floor((creatureData.health / creatureData.maxHealth) *10)
                 print(string.format("%s: %s", creatureData.name, utils.getProgressBar(healthRate)))
 
             else
-                print(string.format("Você tentou o ataque mas esqueceu a espada contra o %s.", creatureData.name))
+                print(string.format("%s tentou o ataque mas esqueceu a espada contra o %s.", playerData.name, creatureData.name))
             end
         end
     }
@@ -51,7 +51,7 @@ function actions.build()
             -- 2. Recuperar vida
             local regenPotions = 5
             playerData.health = math.min(playerData.maxHealth, playerData.health + regenPotions)
-            print(string.format("Você recuperou %d de vida.", regenPotions))
+            print(string.format("%s recuperou %d de vida.", playerData.name, regenPotions))
         end
     }
 

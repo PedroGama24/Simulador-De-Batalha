@@ -38,6 +38,29 @@ Durante a batalha, você pode escolher entre as seguintes ações:
 - **Vitória**: Você vence se a vida do monstro chegar a zero.
 - **Derrota**: Você perde se a sua vida chegar a zero.
 
+
+## Requisitos
+
+- **Lua 5.4.2** ou superior
+
+## Como Executar
+
+1. Clone o repositório:
+   ```sh
+   git clone https://github.com/PedroGama24/Simulador-De-Batalha
+2. Navegue até o diretório do projeto:
+    cd Simulador-De-Batalha
+3.Execute o jogo:
+    lua main.lua
+
+## Contribuição
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests para melhorar o jogo.
+
+## Licença
+Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+Divirta-se jogando e boa sorte na batalha! 🎮⚔️
+
 ## Exemplo de Jogo
 
 ```plaintext
@@ -66,22 +89,3 @@ Qual será a próxima ação de Violet?
 2. Usar poção de regeneração.
 > 1
 Violet atacou o Prismarine Colossus com sucesso, causando 3 de dano.
-
-## Requesitos
-Lua 5.4.2 ou superior
-
-## Como Executar
-Execute o jogo:
-lua main.lua
-
-## Contribuição
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests para melhorar o jogo.
-
-## Licença
-Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
-
-Divirta-se jogando e boa sorte na batalha! 🎮⚔️
-
-
-Este `README.md` fornece uma visão geral clara e detalhada do jogo, incluindo instruções sobre como jogar, requisitos e como executar o jogo.
-Este `README.md` fornece uma visão geral clara e detalhada do jogo, incluindo instruções sobre como jogar, requisitos e como executar o jogo.
